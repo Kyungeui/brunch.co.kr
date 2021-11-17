@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.brunch-logo {
+    background-image: url(imgicon/logo_brunch_v1.png);
+    background-position:-245px 0;
+}
