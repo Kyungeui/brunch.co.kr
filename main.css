@@ -1,0 +1,344 @@
+/* 공통처리 */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 공통 > 정렬 */
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.clearfix::after {
+    content: " ";
+    display: block;
+    float: none;
+    clear: both;
+}
+/* 공통 > text 숨김처리(웹표준) */
+.text-hide {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 1. 상단 배너 */
+
+/* 2. 전체 영역 */
+.wrap {
+}
+
+/* 헤더 */
+#bcHeader {
+    /* border-bottom: 1px solid #ccc; */
+    height: 60px;
+}
+/* 헤더 > 가로 */
+#bcHeader .header-top {
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 8px 10px;
+}
+
+/* 헤더 > 가로 > 왼쪽 */
+#bcHeader .header-top .header-l {
+    padding-top: 10px;
+}
+
+/* 헤더 > 가로 > 왼쪽 - 버튼 이미지 */
+#bcHeader .header-top .header-l .toggle-btn {
+    /* 버튼 사이즈 */
+    width: 27px;
+    height: 23px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 0;
+}
+#bcHeader .header-top .header-l .toggle-img {
+    background-image: url(./imgicon/ico_view_cover.v4_rtn.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 240px 300px;
+    display: block;
+}
+
+/* 헤더 > 가로 > 왼쪽 - brunch 로고 */
+#bcHeader .header-top .header-l h1 {
+    margin-left: 10px;
+}
+#bcHeader .header-top .header-l .header_logo {
+    /* 버튼 사이즈 */
+    width: 80px;
+    height: 23px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 0;
+    display: block;
+}
+#bcHeader .header-top .header-l .logo-img {
+    background-image: url(./imgicon/logo_brunch_v1.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 200px 80px;
+    display: block;
+}  
+
+/* 헤더 > 가로 > 오른쪽 - 시작버튼 */
+#bcHeader .header-top .header-r {
+    padding-top: 5px;
+}
+#bcHeader .header-top .header-r a {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px 12px;
+    display: block;
+    font-size: 12px;
+    color: #666;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* 헤더 > 가로 > 오른쪽 - 써치버튼 */
+#bcHeader .header-top .header-r .search {
+}
+#bcHeader .header-top .header-r .search-btn {
+    /* 버튼 사이즈 */
+    width: 27px;
+    height: 23px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -28px 0;
+    margin-top: 5px;
+}
+#bcHeader .header-top .header-r .search-img {
+    background-image: url(./imgicon/ico_view_cover.v4_rtn.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 240px 300px;
+    display: block;
+} 
+
+/* 메인 */
+#bcMain {
+}
+/* 메인 > 1) 인트로 */
+#bcArticle .intro {
+    max-width: 940px;
+    min-width: 700px;
+    margin: 0 auto;
+}
+/* 메인 > 1) 인트로 > 텍스트 - 메인 */
+#bcArticle .intro .title {
+    font-size: 38px;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: -1px;
+}
+#bcArticle .intro .title-icon {
+    /* 버튼 사이즈 */
+    width: 30px;
+    height: 27px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -12px;
+    vertical-align: top;
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+#bcArticle .intro .icon-img {
+    background-image: url(./imgicon/logo_brunch_v1.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 100px 40px;
+    display: inline-block;
+}
+/* 메인 > 1) 인트로 > 텍스트 - 서브 */
+#bcArticle .intro .sub {
+    margin-top: 8px;
+}
+#bcArticle .intro .sub .sub-cont {
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(205, 205, 205);
+    font-family: 'Nanum Myeongjo', serif;
+    display: block;
+    padding: 8px 0;
+    letter-spacing: -1px;
+}
+#bcArticle .intro .sub-cont:last-child {
+    color: rgb(219, 219, 219);
+}
+/* 메인 > 1) 인트로 > 공지 & 업데이트 */
+#bcArticle .notice .item-list {
+    text-align: right;
+    padding: 10px 0;
+}
+#bcArticle .notice .item-list:last-child {
+    /* 자바스크립트 */
+    display: none;
+}
+#bcArticle .notice .item-list span {
+    font-style: italic;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(102, 196, 191);
+}
+#bcArticle .notice .item-list a {
+    color: #666;
+    font-size: 12px;
+    font-weight: 200;
+    margin-left: 5px;
+}
+#bcArticle .notice .item-list a:hover {
+    text-decoration: underline;
+}
+
+/* 메인 > 2) 에디터픽 */
+/* 에디터픽 슬라이드 li 일부 숨겨두기 (1페이지 제외) */
+#bcArticle .editor .editor-wrap .slide li:nth-child(2),
+#bcArticle .editor .editor-wrap .slide li:nth-child(3),
+#bcArticle .editor .editor-wrap .slide li:nth-child(4),
+#bcArticle .editor .editor-wrap .slide li:nth-child(5),
+#bcArticle .editor .editor-wrap .slide li:nth-child(6),
+#bcArticle .editor .editor-wrap .slide li:nth-child(7),
+#bcArticle .editor .editor-wrap .slide li:nth-child(8),
+#bcArticle .editor .editor-wrap .slide li:nth-child(9) {
+    display: none;
+}
+
+#bcArticle .editor {
+    max-width: 940px;
+    min-width: 700px;
+    margin: 0 auto;
+}
+#bcArticle .editor .editor-wrap .slide {
+    height: 520px;
+}
+#bcArticle .editor .editor-wrap .slide li {
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic {
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .item-pic {
+    width: 50%;
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .item-pic a {
+    display: block;
+    /* width: 480px; 이랬더니 사진 삐져나옴 */
+    width: 100%;
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+/* type - 오른쪽 2분할 (01, 04, 07) + 4분할 (응용ver, 03) */
+#bcArticle .editor .editor-wrap .slide li .slide-pic .item-pic .part-two {
+    width: 100%;
+    height: 50%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .item-pic .part-two a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* type - 3분할 (02, 05, 08) */
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-three {
+    width: 33.3339%;
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-three a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* type - 4분할 (06, 09) */
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-four-full {
+    width: 100%;
+    height: 50%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-four-full a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-four {
+    width: 33.3339%;
+    height: 50%;
+}
+#bcArticle .editor .editor-wrap .slide li .slide-pic .part-four a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 02) 에디터픽 > 01 > 공통 */
+.part {
+    position: relative;
+}
+/* 공통 > 섬네일 설명 문구 */
+.explain {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.explain .explain-inner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+.explain .explain-inner .ex-title {
+    font-size: 30px;
+    line-height: 1.3em;
+    font-family: 'Nanum Myeongjo', serif;
+    padding-bottom: 30px;
+}
+.explain .explain-inner .ex-by .by-text {
+    font-size: 12px;
+    line-height: 1.3em;
+    font-weight: 200;
+}
+/* 공통 > by 아이콘 */
+.explain .explain-inner .by-icon {
+    /* 버튼 사이즈 */
+    width: 18px;
+    height: 16px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -38px -128px;
+    top: 0;
+    left: 0;
+    z-index: 22;
+}
+.explain .explain-inner .by-img {
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    display: inline-block;
+}
+
+/* 공통 > a태그 이미지 확대 */
+.img-scale {
+    overflow: hidden;
+}
+.img-scale img {
+  transition: all 0.2s linear;
+}
+.img-scale:hover img {
+  transform: scale(1.2);
+}
