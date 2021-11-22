@@ -482,3 +482,508 @@
     background-position: -160px 1px;
 }
 
+/* 03) 키워드 */
+/* 공통(키워드, 브런치작가, 추천) - 텍스트 이미지 */
+#bcArticle .keyword {
+    padding-top: 150px;
+}
+#bcArticle .title-text-img {
+    background-image: url(./imgicon/txt_brunch_v6_20181017_rtn.png);
+    background-size: 380px 600px;
+}
+/* 03) 키워드 > 타이틀 */
+#bcArticle .keyword .keyword-title {
+    /* 사이즈 */
+    width: 280px;
+    height: 20px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -95px -298px;
+    margin: 0 auto;
+}
+#bcArticle .keyword .keyword-sub-box {
+    padding: 10px 0;
+}
+#bcArticle .keyword .keyword-sub {
+    /* 사이즈 */
+    width: 150px;
+    height: 15px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -175px 0;
+    margin: 0 auto;
+}
+
+/* 03) 키워드 > 리스트 박스 */
+#bcArticle .keyword .key-list-box {
+    max-width: 940px;
+    min-width: 700px;
+    height: 400px;
+    margin: 30px auto;
+    position: relative;
+}
+#bcArticle .keyword .key-list-box .key-list {
+    position: absolute;
+    width: 119px;
+    height: 119px;
+    text-align: center;
+    border: 1px solid #eee;
+    z-index: 1;
+    font-size: 13px;
+    line-height: 18px;
+}
+#bcArticle .keyword .key-list-box .key-list span {
+    align-items: center;
+    justify-content: center;
+    width: 119px;
+    height: 119px;
+    display: flex;
+    color: #000;
+    font-weight: 100;
+}
+#bcArticle .keyword .key-list-box .key-list:hover {
+    border: 1px solid rgb(102, 196, 191);
+    z-index: 1000;
+}
+#bcArticle .keyword .key-list-box .key-list span:hover {
+    color: rgb(102, 196, 191);
+}
+
+/* 04) 브런치작가 */
+/* 04) 브런치작가 > 타이틀 */
+#bcArticle .writer {
+    margin-top: 150px;
+    width: 100%;
+    height: 1150px;
+    background-color: rgba(250,250,250);
+}
+#bcArticle .writer .writer-text-box {
+    padding-top: 100px;
+}
+#bcArticle .writer .writer-title {
+    /* 사이즈 */
+    width: 260px;
+    height: 20px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -170px;
+    margin: 0 auto;
+}
+#bcArticle .writer .writer-sub-box {
+    padding: 10px 0;
+}
+#bcArticle .writer .writer-sub {
+    /* 사이즈 */
+    width: 100px;
+    height: 15px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -260px -68px;
+    margin: 0 auto;
+}
+/* 04) 브런치작가 > 버튼 */
+#bcArticle .writer .writer-btn-box {
+    height: 30px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bcArticle .writer .writer-btn-box .writer-btn-item {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 12px;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+}
+#bcArticle .writer .writer-btn-box .writer-btn-item:last-child {
+    margin-right: 0;
+}
+/* 04) 브런치작가 > 내용 리스트 */
+#bcArticle .writer .writer-list {
+    max-width: 940px;
+    min-width: 700px;
+    margin: 0 auto;
+}
+
+#bcArticle .writer .writer-list .writer-list-box li {
+    width: 306px;
+    height: 380px;
+    background-color: #fff;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    float: left;
+    margin: 5px 0;
+}
+#bcArticle .writer .writer-list .writer-list-box li:nth-child(2),
+#bcArticle .writer .writer-list .writer-list-box li:nth-child(5) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+#bcArticle .writer .writer-list .writer-list-box li a {
+    width: 100%;
+    height: 90%;
+    display: block;
+}
+#bcArticle .writer .writer-list .writer-list-box a img {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+}
+#bcArticle .writer .writer-list .writer-list-box li a .writer-title {
+    font-family: 'Nanum Myeongjo', serif;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font-size: 20px;
+    color: #000;
+}
+#bcArticle .writer .writer-list .writer-list-box li a .writer-sub {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgb(163,163,163);
+    font-weight: 300;
+    font-size: 13px;
+    padding-bottom: 15px;
+}
+#bcArticle .writer .writer-list .writer-list-box li a .writer-cont {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgb(163,163,163);
+    font-weight: 300;
+    font-size: 11px;
+    padding: 0 20px;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+/* 버튼 */                                      
+#bcArticle .writer .writer-list .writer-list-box li .writer-list-btn-box {
+    width: 100%;
+}
+
+#bcArticle .writer .writer-list-btn-box {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bcArticle .writer .writer-list-btn-box .writer-list-btn-item {
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 12px;
+    display: block;
+    font-size: 10px;
+    color: #666;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* 05) 중단배너 */
+#bcArticle .middle-banner {
+    display: block;
+    width: 940px;
+    margin: 97px auto 0;
+}
+
+/* 06) 추천 */
+/* 06) 추천 > 타이틀 */
+#bcArticle .recommend {
+    margin-top: 100px;
+    width: 100%;
+    height: 1000px;
+}
+#bcArticle .recommend .recom-text-box {
+    padding-top: 100px;
+}
+#bcArticle .recommend .recom-title {
+    /* 사이즈 */
+    width: 380px;
+    height: 20px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -220px;
+    margin: 0 auto;
+}
+#bcArticle .recommend .recom-sub-box {
+    padding: 10px 0;
+}
+#bcArticle .recommend .recom-sub {
+    /* 사이즈 */
+    width: 165px;
+    height: 15px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -73px;
+    margin: 0 auto;
+}
+/*
+/* 06) 추천 > 추천 리스트 슬라이드 */
+#bcArticle .recommend .recom-list .recom-list-box {
+    width: 3400px;
+    padding: 50px 0;
+    margin-left: 20px;
+}
+#bcArticle .recommend .recom-list .recom-list-box li {
+    width: 240px;
+    height: 500px;
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 60px;
+}
+#bcArticle .recommend .recom-list .recom-list-box li:last-child {
+    margin-right: 0;
+}
+#bcArticle .recommend .recom-list .recom-list-box li a {
+    width: 100%;
+    height: 90%;
+    display: block;
+}
+#bcArticle .recommend .recom-list .recom-list-box li a .recom-title {
+    width: 100%;
+    height: 50px;
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -.025em;
+    color: #000;
+}
+#bcArticle .recommend .recom-list .recom-list-box li a .recom-cont {
+    display: block;
+    width: 100%;
+    color: rgb(163,163,163);
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+/* 마우스 오버 시, p태그에 언더라인 */
+#bcArticle .recommend .recom-list .recom-list-box li:hover > a > p {
+    text-decoration: underline;
+}
+
+/* 06) 추천 > 추천 리스트 슬라이드 > by */
+.recom-ex-by .recom-by-text {
+    font-size: 12px;
+    line-height: 1.3em;
+    font-weight: 300;
+    color: rgb(163,163,163);
+}
+.recom-by-icon {
+    /* 버튼 사이즈 */
+    width: 18px;
+    height: 16px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -38px -146px;
+    top: 0;
+    left: 0;
+}
+.recom-by-img {
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    display: inline-block;
+}
+
+/* 메인 > top버튼 */
+#bcMain .go-top-icon {
+    /* 버튼 사이즈 */
+    width: 60px;
+    height: 30px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -90px;
+    bottom: 30px;
+    right: 40px;
+    position: absolute;
+}
+#bcMain {
+    position: relative;
+}
+#bcMain .go-top-img {
+    background-image: url(./imgicon/view_discover_150824.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 210px 230px;
+    display: inline-block;
+}
+
+#bcMain .go-top-icon:hover {
+    background-image: url(./imgicon/view_discover_150824.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 210px 230px;
+    display: inline-block;
+    /* 버튼 사이즈 */
+    width: 60px;
+    height: 30px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -90px -90px;
+    bottom: 30px;
+    right: 40px;
+    position: absolute;
+}
+
+/* 푸터 */
+.footer {
+    height: 353px;
+    background: #101010;
+    height: 353px;
+    background: #101010;
+}
+.footer .footer_inner {
+    max-width: 940px;
+    min-width: 700px;
+    margin: 0 auto;
+    height: 100%;
+}
+.footer .footer_inner .footer_inner_box {
+    height: 100%;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.footer .footer_inner .footer_inner_box .footer_info {
+    float: left;
+    height: 150px;
+    margin-right: 150px;
+}
+
+/* 푸터 > 타이틀 로고 */
+.footer .footer_inner .footer_inner_box .info-img {
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    display: inline-block;
+}
+.footer .footer_inner .footer_inner_box .footer_info .info-logo-icon {
+    /* 버튼 사이즈 */
+    width: 36px;
+    height: 36px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -318px -67px;
+}
+
+.footer .footer_inner .footer_inner_box .footer_info .info-img2 {
+    background-image: url(./imgicon/txt_brunch_v6_20181017_rtn.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 380px 600px;
+    display: inline-block;
+}
+.footer .footer_inner .footer_inner_box .footer_info .info-ment-icon {
+    /* 사이즈 */
+    width: 190px;
+    height: 40px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -318px;
+    display: block;
+    margin: 20px 0 5px 0;
+}
+.footer .footer_inner .footer_inner_box .footer_info .info-cl-icon {
+    /* 사이즈 */
+    width: 60px;
+    height: 20px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -190px -318px;
+    display: block;
+}
+/* 푸터 > 리스트 인포 */
+.footer .footer_inner .footer_inner_box .footer_list_info {
+    float: left;
+    width: 464px;
+}
+
+.footer .footer_inner .footer_inner_box .footer_list_info li {
+    width: 232px;
+    margin-bottom: 17px;
+    line-height: 17px;
+    float: left;
+}
+
+.footer .footer_inner .footer_inner_box .footer_list_info li a{
+   font-size: 13px;
+   font-weight: 300;
+   color: #D9D9D9;
+}
+
+.footer .footer_inner .footer_inner_box .footer_list_info li:hover{
+    text-decoration: underline;
+}
+
+/* 푸터 > 리스트 SNS */
+.footer .footer_inner .footer_inner_box .footer_list_sns {
+    float: left;
+    width: 120px;
+}
+
+.footer .footer_inner .footer_inner_box .footer_list_sns li {
+    width: 120px;
+    margin-bottom: 17px;
+    line-height: 15px;
+}
+
+.footer .footer_inner .footer_inner_box .footer_list_sns li a{
+    font-size: 13px;
+    font-weight: 300;
+    color: #D9D9D9;
+ }
+ 
+ .footer .footer_inner .footer_inner_box .footer_list_sns li:hover{
+     text-decoration: underline;
+ }
+
+ /* 푸터 > 왕하단 */
+.footer .footer_inner .footer_inner_box .footer_corp {
+    margin-top: 35px;
+    border-top: 1px solid rgba(184, 184, 184, 0.2);
+}
+.footer .footer_inner .footer_inner_box .footer_corp .kakao {
+    display: inline-block;
+    padding-top: 30px;
+    color: rgba(113,113,113);
+    font-family: 'Nanum Myeongjo', serif;
+    font-style: italic;
+    font-size: 11px;
+}
+.footer .footer_inner .footer_inner_box .footer_corp .kakao:hover {
+    text-decoration: underline;
+}
+/* 아이콘 이미지화 */
+.footer .footer_inner .footer_corp .app .info-img {
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    display: inline-block;
+}
+.footer .footer_inner .footer_corp .app {
+    display: block;
+    margin-top: 20px;
+    float: right;
+}
+.footer .footer_inner .footer_corp .app .google-icon {
+    /* 사이즈 */
+    width: 24px;
+    height: 26px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -258px -98px;
+    display: block;
+    margin-right: 10px;
+}
+.footer .footer_inner .footer_corp .app .apple-icon {
+    /* 사이즈 */
+    width: 22px;
+    height: 26px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -288px -98px;
+    display: block;
+}
