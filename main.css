@@ -23,6 +23,14 @@
     line-height: 0;
     text-indent: -9999px;
 }
+.screen-out {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    position: absolute;
+}
 
 /* 1. 상단 배너 */
 
@@ -210,7 +218,8 @@
     display: none;
 }
 
-#bcArticle .editor {
+/* 2) 에디터픽 > 이미지 슬라이드 */
+#bcArticle .editor .editor-wrap {
     max-width: 940px;
     min-width: 700px;
     margin: 0 auto;
@@ -282,7 +291,7 @@
 }
 
 
-/* 02) 에디터픽 > 01 > 공통 */
+/* 02) 에디터픽 > 이미지 슬라이드 - 공통 */
 .part {
     position: relative;
 }
@@ -342,3 +351,134 @@
 .img-scale:hover img {
   transform: scale(1.2);
 }
+
+/* 02) 에디터픽 > 사이드 버튼 */
+#bcArticle .editor .editor-side {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+#bcArticle .editor {
+    position: relative;
+}
+/* 사이드 버튼 > prev */
+#bcArticle .editor .editor-side .btn-prev .prev-img {
+    position: absolute;
+    top: 36%;
+    left: 30px;
+    z-index: 10;
+    display: block;
+    /* 전체 이미지 */
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    /* 버튼 사이즈 */
+    width: 105px;
+    height: 105px;
+    /* 이미지 찾기 (조정) */
+    background-position: -164px -174px;
+}
+/* 사이드 버튼 > next */
+#bcArticle .editor .editor-side .btn-next .next-img {
+    position: absolute;
+    top: 36%;
+    right: 30px;
+    z-index: 10;
+    display: block;
+    /* 전체 이미지 */
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    /* 버튼 사이즈 */
+    width: 105px;
+    height: 105px;
+    /* 이미지 찾기 (조정) */
+    background-position: -267px -174px;
+}
+
+/* 02) 에디터픽 > 페이지 버튼 */
+#bcArticle .editor .editor-page {
+    width: 940px;
+    margin: 22px auto 0;
+    text-align: center;
+}
+#bcArticle .editor .editor-page .link-page {
+    display: inline-block;
+    height: 31px;
+    padding: 0 11px;
+    vertical-align: top;
+}
+/* 02) 에디터픽 > 페이지 버튼 > 이미지 */
+#bcArticle .editor .editor-page .link-img {
+    background-image: url(./imgicon/img_paging.v2_rtn.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 191px 22px;
+    display: block;
+}
+#bcArticle .editor .editor-page .no1 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -10px;
+}
+#bcArticle .editor .editor-page .no2 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -20px 1px;
+}
+#bcArticle .editor .editor-page .no3 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -40px 1px;
+}
+#bcArticle .editor .editor-page .no4 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -60px 1px;
+}
+#bcArticle .editor .editor-page .no5 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -80px 1px;
+}
+#bcArticle .editor .editor-page .no6 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -100px 1px;
+}
+#bcArticle .editor .editor-page .no7 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -120px 1px;
+}
+#bcArticle .editor .editor-page .no8 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -140px 1px;
+}
+#bcArticle .editor .editor-page .no9 {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -160px 1px;
+}
+
