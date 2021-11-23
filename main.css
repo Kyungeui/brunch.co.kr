@@ -36,6 +36,7 @@
 .banner {
     overflow: hidden;
     position: relative;
+    margin: -420px 0 0 0;
 }
 /* 상단 배너 > 전체 영역 */
 .banner .top-list-box {
@@ -103,18 +104,51 @@
     height: 60px;
 }
 /* 헤더 > 가로 */
-#bcHeader .header-top {
-    max-width: 1400px;
+.header {
+    max-width: 1500px;
+    padding: 8px 10px;
+    height: 60px;
+    /* 메뉴바 고정 */
+    position: static;
+    top: 0;
+    z-index: 10000;
+}
+
+/* JS 2번*/
+.header-content {
+    width:100%;
+    padding: 8px 8px 8px 0px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.8);
+    border-bottom: 1px solid #ccc;
+    transition: 0.3s linear 0.5s;
+    /* 메뉴바 고정 */
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+#bcHeader .header .header-top {
+    /* max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 8px 10px;
+    padding: 8px 10px; */
+    position: relative;
+    width: 1400px;
+    margin: auto;
+    margin-top: 10px;
 }
 /* 헤더 > 가로 - 고정 */
 #bcHeader .header-top {}
 
 /* 헤더 > 가로 > 왼쪽 */
-#bcHeader .header-top .header-l {
+#bcHeader .header .header-top .header-l {
     padding-top: 10px;
+    /* 추가 - 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
 }
 
 /* 헤더 > 가로 > 왼쪽 - 버튼 이미지 */
@@ -124,6 +158,7 @@
     height: 23px;
     /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
     background-position: 0 0;
+    float: left;
 }
 #bcHeader .header-top .header-l .toggle-img {
     background-image: url(./imgicon/ico_view_cover.v4_rtn.png);
@@ -151,11 +186,18 @@
     /* 전체 이미지 사이즈 */
     background-size: 200px 80px;
     display: block;
+    float: left;
+    margin-left: 8px;
 }  
 
 /* 헤더 > 가로 > 오른쪽 - 시작버튼 */
 #bcHeader .header-top .header-r {
     padding-top: 5px;
+    /* 추가 - 포지션 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
 }
 #bcHeader .header-top .header-r a {
     border-radius: 30px;
@@ -168,10 +210,12 @@
     font-weight: 200;
     text-align: center;
     margin-right: 10px;
+    float: right;
 }
 
 /* 헤더 > 가로 > 오른쪽 - 써치버튼 */
 #bcHeader .header-top .header-r .search {
+    float: right;
 }
 #bcHeader .header-top .header-r .search-btn {
     /* 버튼 사이즈 */
@@ -359,6 +403,7 @@
 
 /* 메인 */
 #bcMain {
+    margin-top: 60px;
 }
 /* 메인 > 1) 인트로 */
 #bcArticle .intro {
@@ -436,7 +481,7 @@
 
 /* 메인 > 2) 에디터픽 */
 /* 에디터픽 슬라이드 li 일부 숨겨두기 (1페이지 제외) */
-#bcArticle .editor .editor-wrap .slide li:nth-child(2),
+/* #bcArticle .editor .editor-wrap .slide li:nth-child(2),
 #bcArticle .editor .editor-wrap .slide li:nth-child(3),
 #bcArticle .editor .editor-wrap .slide li:nth-child(4),
 #bcArticle .editor .editor-wrap .slide li:nth-child(5),
@@ -445,19 +490,30 @@
 #bcArticle .editor .editor-wrap .slide li:nth-child(8),
 #bcArticle .editor .editor-wrap .slide li:nth-child(9) {
     display: none;
+} */
+#bcArticle .editor {
+    overflow: hidden;
+
+}
+#bcArticle .editor .editor-wrap .slide {
+}
+#bcArticle .editor .editor-wrap .slide li {
+    float: left;
 }
 
 /* 2) 에디터픽 > 이미지 슬라이드 */
 #bcArticle .editor .editor-wrap {
-    max-width: 940px;
-    min-width: 700px;
-    margin: 0 auto;
+    width: 10000px;
 }
 #bcArticle .editor .editor-wrap .slide {
     height: 520px;
+    overflow: hidden;
 }
 #bcArticle .editor .editor-wrap .slide li {
     height: 100%;
+    max-width: 940px;
+    min-width: 700px;
+    margin: 0 auto;
 }
 #bcArticle .editor .editor-wrap .slide li .slide-pic {
     height: 100%;
@@ -490,6 +546,7 @@
 
 /* type - 3분할 (02, 05, 08) */
 #bcArticle .editor .editor-wrap .slide li .slide-pic .part-three {
+    width: 20%;
     width: 33.3339%;
     height: 100%;
 }
@@ -590,6 +647,12 @@
 #bcArticle .editor {
     position: relative;
 }
+/* 09) JS 
+.go {
+    transform: translate(-300px);
+}*/
+
+
 /* 사이드 버튼 > prev */
 #bcArticle .editor .editor-side .btn-prev .prev-img {
     position: absolute;
@@ -647,12 +710,13 @@
     background-size: 191px 22px;
     display: block;
 }
+/* 02) 에디터픽 > 페이지 버튼 > 흰색 버튼 */
 #bcArticle .editor .editor-page .no1 {
     /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
     /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
-    background-position: 0 -10px;
+    background-position: 0 1px;
 }
 #bcArticle .editor .editor-page .no2 {
     /* 버튼 사이즈 */
@@ -710,6 +774,78 @@
     /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
     background-position: -160px 1px;
 }
+
+/* 02) 에디터픽 > 페이지 버튼 > 검은색 버튼 */
+#bcArticle .editor .editor-page .no1-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -10px;
+}
+.no2-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -20px -10px;
+}
+/* #bcArticle .editor .editor-page .no2-b {
+    width: 13px;
+    height: 12px;
+    background-position: -20px -10px;
+} */
+#bcArticle .editor .editor-page .no3-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -40px -10px;
+}
+#bcArticle .editor .editor-page .no4-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -60px -10px;
+}
+#bcArticle .editor .editor-page .no5-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -80px -10px;
+}
+#bcArticle .editor .editor-page .no6-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -100px -10px;
+}
+#bcArticle .editor .editor-page .no7-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -120px -10px;
+}
+#bcArticle .editor .editor-page .no8-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -140px -10px;
+}
+#bcArticle .editor .editor-page .no9-b {
+    /* 버튼 사이즈 */
+    width: 13px;
+    height: 12px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -160px -10px;
+}
+
+
 
 /* 03) 키워드 */
 /* 공통(키워드, 브런치작가, 추천) - 텍스트 이미지 */
@@ -829,6 +965,13 @@
 #bcArticle .writer .writer-btn-box .writer-btn-item:last-child {
     margin-right: 0;
 }
+/* JS 8) 추천 on */
+#bcArticle .writer .writer-btn-box .on {
+    color: rgb(102, 196, 191);
+    border-color: rgb(102, 196, 191);
+}
+
+
 /* 04) 브런치작가 > 내용 리스트 */
 #bcArticle .writer .writer-list {
     max-width: 940px;
@@ -928,6 +1071,8 @@
     margin-top: 100px;
     width: 100%;
     height: 1000px;
+    /* 추가 */
+    overflow: hidden;
 }
 #bcArticle .recommend .recom-text-box {
     padding-top: 100px;
@@ -951,7 +1096,7 @@
     background-position: 0 -73px;
     margin: 0 auto;
 }
-/*
+
 /* 06) 추천 > 추천 리스트 슬라이드 */
 #bcArticle .recommend .recom-list .recom-list-box {
     width: 3400px;
@@ -1021,6 +1166,53 @@
     background-size: 400px 300px;
     display: inline-block;
 }
+
+/* 06) 추천  > 사이드 버튼 */
+#bcArticle .recommend .recom-side {
+    width: 1400px;
+    margin: 0 auto;
+}
+#bcArticle .recommend {
+    position: relative;
+}
+/* 사이드 버튼 > prev */
+#bcArticle .recommend .recom-side .btn-prev .prev-img {
+    position: absolute;
+    top: 36%;
+    left: 30px;
+    z-index: 10;
+    display: block;
+    /* 전체 이미지 */
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    /* 버튼 사이즈 */
+    width: 105px;
+    height: 105px;
+    /* 이미지 찾기 (조정) */
+    background-position: -164px -174px;
+}
+/* 사이드 버튼 > next */
+#bcArticle .recommend .recom-side .btn-next .next-img {
+    position: absolute;
+    top: 36%;
+    right: 30px;
+    z-index: 10;
+    display: block;
+    /* 전체 이미지 */
+    background-image: url(./imgicon/ico_brunch_v8_181004_v2.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 400px 300px;
+    /* 버튼 사이즈 */
+    width: 105px;
+    height: 105px;
+    /* 이미지 찾기 (조정) */
+    background-position: -267px -174px;
+}
+
+
 
 /* 메인 > top버튼 */
 #bcMain .go-top-icon {

@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brunch</title>
-    <!--파비콘-->
+    <!-- 파비콘 -->
     <link rel="icon" href="brunch_icon.png">
+
     <!-- 스타일 시트 -->
     <link rel="stylesheet" href="reset.css" type="text/css" />
     <link rel="stylesheet" href="main.css" type="text/css" />
+
     <!-- 웹폰트 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!-- 1. 상단 배너 -->
-    <div class="banner" style="margin-top: -420px;">
+    <div class="banner" id ="banner">
         <ul class="top-list-box">
             <li class="top-list-banner">
                 <a href="#" class="top-ban-link ban-lg">
                     <img class="ban-lg-img" src="./imgicon/top-banner-lg.png" alt="">
                 </a>
-                <a href="#" class="top-ban-link ban-sm">
+                <a href="#" id="ban-sm" class="top-ban-link ban-sm">
                     <img class="ban-sm-img" src="./imgicon/top-banner-sm.png" alt="">
                 </a>
             </li>
@@ -30,25 +33,27 @@
     </div>
     <!-- 2. 전체 영역 -->
     <div id="bcWrap" class="wrap">
-        <!-- 상단 배너 -->
-        <header id="bcHeader" class="header">
+        <!-- 배너 -->
+        <header id="bcHeader" class="header-box">
             <!-- 가로 배너 -->
-            <div class="header-top clearfix">
-                <!-- 왼쪽 -->
-                <div class="header-l pull-left">
-                    <button id="toggleBtn" class="toggle-btn text-hide toggle-img pull-left">버튼</button>
-                    <h1 class="pull-left"><a href="#" class="header_logo logo-img text-hide">brunch</a></h1>
-                </div>
-                <!-- 오른쪽 -->
-                <div class="header-r pull-right">
-                    <a href="#" class="link-start pull-left">시작하기</a>
-                    <form action="search" class="search pull-left">
-                        <button id="searchBtn" class="search-btn text-hide pull-right search-img">검색버튼</button>
-                    </form>
+            <div id = "header" class="header">
+                <div class="header-top"><!--clearfix-->
+                    <!-- 왼쪽 -->
+                    <div class="header-l clearfix"> <!--pull-left-->
+                        <button id="toggleBtn" class="toggle-btn text-hide toggle-img">버튼</button><!--pull-left-->
+                        <h1 class=""><!--pull-left--><a href="#" class="header_logo logo-img text-hide">brunch</a></h1>
+                    </div>
+                    <!-- 오른쪽 -->
+                    <div class="header-r clearfix"> <!---pull-right-->
+                        <form action="search" class="search"> <!--pull-left-->
+                            <button id="searchBtn" class="search-btn text-hide search-img">검색버튼</button><!---pull-right-->
+                        </form>
+                        <a href="#" class="link-start">시작하기</a> <!--pull-left-->
+                    </div>
                 </div>
             </div>
             <!-- 세로 배너 -->
-            <div class="header-side" style="display: none">
+            <div id="header-side" class="header-side" style="display: none">
                 <div class="header-s">
                     <div class="header-s-top">
                         <div class="logo-black text-hide black-img">logo</div>
@@ -121,7 +126,6 @@
                                 <!-- 01 -->
                                 <li class="slide-list">
                                     <div class="slide-pic clearfix">
-                                        
                                         <div class="item-pic pull-left">
                                             <a href="#">
                                                 <span class="cover1"><img src="./imgback/img01.png" alt=""></span>
@@ -169,7 +173,7 @@
                                 </li>
 
                                 <!-- 02 -->
-                                <li class="slide-list">
+                                <li class="slide-list slide-list1">
                                     <div class="slide-pic clearfix">
                                         <div class="item-pic pull-left part-three part">
                                             <a href="#" class="img-scale">
@@ -716,7 +720,7 @@
                             <a href="#" class="btn-side btn-prev">
                                 <span class="prev-img text-hide">이전 게시물</span>
                             </a>
-                            <a href="#" class="btn-side btn-next">
+                            <a href="#" class="btn-side btn-next" onclick="move()">
                                 <span class="next-img text-hide">이후 게시물</span>
                             </a>
                         </div>
@@ -724,7 +728,7 @@
                         <div class="editor-page">
                             <span class="link-page">
                                 <span class="text-hide screen-out">현재페이지</span>
-                                <span class="link-img no1 text-hide">01</span>
+                                <span class="link-img no1-b text-hide">01</span>
                             </span>
                             <a href="#" class="link-page">
                                 <span class="link-img no2 text-hide">02</span>
@@ -855,17 +859,225 @@
                         </div>
                         <!-- 버튼 -->
                         <div class="writer-btn-box">
-                            <button class="writer-btn-item">드로잉</button>
-                            <button class="writer-btn-item">영화</button>
-                            <button class="writer-btn-item">브랜딩</button>
+                            <button class="writer-btn-item on" data-id="drawing">드로잉</button>
+                            <button class="writer-btn-item" data-id="movie">영화</button>
+                            <button class="writer-btn-item" data-id="branding">브랜딩</button>
                         </div>
                         <!-- 내용 리스트 -->
                         <div class="writer-list">
-                            <ul class="writer-list-box clearfix">
+                            <ul id="drawing" class="writer-list-box clearfix" style="display: block;">
                                 <li class="writer-list-item">
                                     <a href="#" class="writer-link">
                                         <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
                                         <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="movie" class="writer-list-box clearfix" style="display: none;">
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">하이룽</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">손정수</p>
+                                        <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
+                                        <span class="writer-cont">
+                                            브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
+                                            '착한 브라질 이야기'. 브라질 한식 홍보 운동
+                                            '반찬닷컴 브라질' 대표입니다. 이번에 드디어 책도 냈습니다!
+                                        </span>
+                                    </a>
+                                    <div class="writer-list-btn-box">
+                                        <button class="writer-list-btn-item">드로잉</button>
+                                        <button class="writer-list-btn-item">영화</button>
+                                        <button class="writer-list-btn-item">브랜딩</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="branding" class="writer-list-box clearfix" style="display: none;">
+                                <li class="writer-list-item">
+                                    <a href="#" class="writer-link">
+                                        <img src="./imgprofile/writer01.jpeg" alt="" class="writer-thumb">
+                                        <p class="writer-title">세번째</p>
                                         <span class="writer-sub">착한브라질이야기 칼럼니스트</span>
                                         <span class="writer-cont">
                                             브라질에 35년 살며 보고 배운 것을 재미있게 쓰는
@@ -1230,11 +1442,20 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- 버튼 : 양 사이드 -->
+                        <div class="recom-side">
+                            <a href="#" class="btn-side btn-prev">
+                                <span class="prev-img text-hide">이전 게시물</span>
+                            </a>
+                            <a href="#" class="btn-side btn-next">
+                                <span class="next-img text-hide">이후 게시물</span>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
             <!-- top 버튼 -->
-            <a href="#" class="go-top-icon go-top-img text-hide">Top</a>
+            <a href="#" id="go-top-icon" class="go-top-icon go-top-img text-hide">Top</a>
         </div>
 
         <!-- 하단 영역 -->
@@ -1311,5 +1532,99 @@
             </div>
         </footer>
     </div>
+
+
+    <!-- JS -->
+    <script>
+
+        // 스크롤
+        window.addEventListener('scroll', (e) => {
+            const top_menu = document.getElementById('header');
+            const top_banner = document.getElementById('banner');
+            const sm_banner = document.getElementById('ban-sm');
+            const windowHeight = window.screen.availHeight;
+
+            // 1) 광고 배너
+            if (window.scrollY <= 0){
+                top_banner.style.margin = '0px 0px 0px 0px';
+                top_banner.style.transition = '0.6s ease-out';
+                sm_banner.style.display = 'none';
+            }
+            else if (window.scrollY > 0){
+                top_banner.style.margin = ' -420px 0px 0px 0px';
+                sm_banner.style.display = 'block';
+            }
+
+            // 2) 헤더 (가로)
+            if (window.scrollY <= 500){
+                // alert("hi!");
+                top_menu.classList.remove('header-content');
+                // return;
+            }
+            else if (window.scrollY > 500){
+                top_menu.classList.add('header-content');
+            }
+
+            // 3) 탑 버튼
+            const top_btn = document.getElementById('go-top-icon');
+            if (window.scrollY <= 500){
+                top_btn.style.position = 'absolute';
+            }
+            else if (500 < window.scrollY && window.scrollY <= 3550){
+                top_btn.style.position = 'fixed';
+            }
+            else if (window.scrollY > 3550){
+                top_btn.style.position = 'absolute';
+            }
+
+        });
+
+        // 4-1) 버튼 -> 헤더(세로) 등장
+        const t_btn = document.querySelector(".toggle-btn");
+        t_btn.addEventListener('click', e => {
+            e.preventDefault();
+            const h_side = document.getElementById('header-side');
+            h_side.style.display = 'block';
+        });
+
+        // 4-2) 버튼 -> 헤더(세로) 닫기
+        const h_side_hide = document.querySelector("#bcWrap");
+        h_side_hide.addEventListener("click", function(e) {
+            if (e.screenX > 260){
+                const h_side = document.getElementById('header-side');
+                h_side.style.display = 'none';
+            }
+        });
+
+
+        // 8) 브런치 작가 -> 클릭 (탭 형식)
+        const writer_btn = document.querySelectorAll(".writer-btn-item");
+
+        for (const wb of writer_btn) {
+            wb.addEventListener('click', e => {
+                // 모든 버튼에 대한 active클래스 해제
+                for (const item of document.querySelectorAll(".writer-btn-item")) {
+                    item.classList.remove('on');
+                }
+
+                // 클릭된 자기 자신은 active클래스 적용
+                e.currentTarget.classList.add('on');
+
+                // 화면상에 보이는 모든 페이지를 숨김
+                for (const writer_list of document.querySelectorAll(".writer-list-box")) {
+                    writer_list.style.display = 'none';
+                }
+
+                // 클릭된 버튼에 적용된 'data-city'값을 취득
+                const data_id = e.currentTarget.dataset.id;
+                // 취득한 값을 id속성으로 사용하는 페이지에게 active클래스 적용 -> 화면에 표시
+                document.getElementById(data_id).style.display = 'block';
+            });
+        }
+
+ 
+        
+
+    </script>
 </body>
 </html>
