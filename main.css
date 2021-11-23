@@ -33,6 +33,65 @@
 }
 
 /* 1. 상단 배너 */
+.banner {
+    overflow: hidden;
+    position: relative;
+}
+/* 상단 배너 > 전체 영역 */
+.banner .top-list-box {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+/* 상단 배너 > 전체 영역 > li태그 */
+.banner .top-list-box .top-list-banner {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform: none;
+    transition: transform .3s ease-in-out;
+}
+/* 상단 배너 > 전체 영역 > li태그 > a태그 */
+.banner .top-list-box .top-list-banner .top-ban-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 상단 배너 > 전체 영역 > li태그 > 라지배너 a태그 */
+.banner .top-list-box .top-list-banner .ban-lg {
+    display: block;
+    width: inherit;
+    height: 480px;
+    background-color: rgba(253,245,230);
+    background-size: cover;
+}
+/* 상단 배너 > 전체 영역 > li태그 > 라지배너 a태그 > 라지 이미지 */
+.banner .top-list-box .top-list-banner .ban-lg .ban-lg-img {
+    width: 960px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+}
+/* 상단 배너 > 전체 영역 > li태그 > 스몰배너 a태그 */
+.banner .top-list-box .top-list-banner .ban-sm {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    background-color: rgba(253,245,230);
+    background-size: cover;
+}
+/* 상단 배너 > 전체 영역 > li태그 > 스몰배너 a태그 > 스몰 이미지 */
+.banner .top-list-box .top-list-banner .ban-sm .ban-sm-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -480px;
+    width: 960px;
+}
 
 /* 2. 전체 영역 */
 .wrap {
@@ -50,6 +109,8 @@
     box-sizing: border-box;
     padding: 8px 10px;
 }
+/* 헤더 > 가로 - 고정 */
+#bcHeader .header-top {}
 
 /* 헤더 > 가로 > 왼쪽 */
 #bcHeader .header-top .header-l {
@@ -127,6 +188,174 @@
     background-size: 240px 300px;
     display: block;
 } 
+
+/* 헤더 > 세로 */
+#bcHeader .header-side {
+    width: 260px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid rgb(205, 205, 205);
+    z-index: 100000;
+    /* 스크롤 없이 고정 */
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+}
+/* 헤더 > 세로 > top */
+#bcHeader .header-side .header-s .header-s-top {
+    background-color: rgb(248, 248, 248);
+    padding: 30px 0;
+    border-bottom: 1px solid rgb(205, 205, 205);
+}
+/* 헤더 > 세로 > top - 로고 */
+#bcHeader .header-side .black-img {
+    background-image: url(./imgicon/logo_brunch_v1.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 200px 80px;
+    display: block;
+}
+#bcHeader .header-side .logo-black {
+    /* 버튼 사이즈 */
+    width: 50px;
+    height: 50px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: 0 -25px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+/* 헤더 > 세로 > top - 텍스트 */
+#bcHeader .header-side p {
+    font-family: Georgia;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.35;
+    text-align: center;
+    color: #666;
+    margin-bottom: 5px;
+}
+#bcHeader .header-side .slogan_writer {
+    padding: 10px 0;
+    font-size: 11px;
+    color:rgb(205, 205, 205);
+}
+/* 헤더 > 세로 > top - 버튼 */
+#bcHeader .header-side .brunch-btn {
+    background-color: #fff;
+    width: 110px;
+    height: 20px;
+    border: 1px solid rgb(102, 196, 191);
+    font-weight: 100;
+    font-size: 14px;
+    padding: 5px;
+    color: rgb(102, 196, 191);
+    border-radius: 30px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 헤더 > 세로 > middle */
+#bcHeader .header-side .header-s .header-s-middle ul {
+    margin: 0 auto;
+    width: 240px;
+    padding: 30px 0;
+}
+#bcHeader .header-side .header-s .header-s-middle ul li {
+    padding: 12px 0;
+    width: 240px;
+    text-align: center;
+}
+#bcHeader .header-side .header-s .header-s-middle ul .now a {
+    color: rgb(102, 196, 191);
+}
+#bcHeader .header-side .header-s .header-s-middle ul li a {
+    font-size: 14px;
+    font-weight: 200;
+    height: 14px;
+    line-height: 13px;
+    color: rgb(68, 68, 68);
+}
+#bcHeader .header-side .header-s .header-s-middle ul li a:hover {
+    color: rgb(102, 196, 191);
+}
+
+/* 헤더 > 세로 > bottom */
+#bcHeader .header-side .header-s .header-s-bottom {
+    width: 100%;
+    height: 100%;
+}
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link {
+    text-align: left;
+    margin: 0 auto;
+    /* 선 */
+    display: block;
+    width: 173px;
+    height: 35px;
+    border-bottom: 2px solid #333;
+}
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link .tag1 {
+    font-size: 14px;
+    font-weight: 200;
+    width: 80px;
+    height: 14px;
+    line-height: 13px;
+    color: rgb(68, 68, 68);
+    border-radius: 30px;
+    border: 1px solid rgb(209, 209, 209);
+    font-weight: 100;
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 30px;
+    text-align: center;
+}
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link .tag2 {
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(173, 173, 173);
+    padding-left: 10px;
+}
+/* 헤더 > 세로 > bottom - 화살표 이미지 */
+#bcHeader .header-side .header-s .header-s-bottom a .tag3 {
+    /* 버튼 사이즈 */
+    width: 20px;
+    height: 10px;
+    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
+    background-position: -60px -25px;
+    padding-bottom: 10px;
+    display: block;
+    float: right;
+}
+#bcHeader .header-side .header-s .header-s-bottom a .arrow-img {
+    background-image: url(./imgicon/logo_brunch_v1_211103.png);
+    background-repeat: no-repeat;
+    /* 전체 이미지 사이즈 */
+    background-size: 200px 80px;
+}
+/* 헤더 > 세로 > bottom - 작가지원 링크 */
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link2 {
+    display: block;
+    margin: 0 auto;
+    width: 173px;
+    padding-top: 35px;
+}
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link2 img {
+    width: 100%;
+}
+/* 헤더 > 세로 > bottom - 계정 찾기 링크 */
+#bcHeader .header-side .header-s .header-s-bottom .bottom-link3 {
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(173, 173, 173);
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: 50px auto;
+    text-decoration: underline;
+}
+
 
 /* 메인 */
 #bcMain {
