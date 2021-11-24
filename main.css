@@ -493,9 +493,15 @@
 } */
 #bcArticle .editor {
     overflow: hidden;
-
+}
+/* 추가 - 왼쪽 마진 */
+#bcArticle .editor .editor-wrap {
+    width: 940px;
+    overflow: visible;
+    margin: 0 auto;
 }
 #bcArticle .editor .editor-wrap .slide {
+    width: 10000px;
 }
 #bcArticle .editor .editor-wrap .slide li {
     float: left;
@@ -503,7 +509,6 @@
 
 /* 2) 에디터픽 > 이미지 슬라이드 */
 #bcArticle .editor .editor-wrap {
-    width: 10000px;
 }
 #bcArticle .editor .editor-wrap .slide {
     height: 520px;
@@ -546,7 +551,6 @@
 
 /* type - 3분할 (02, 05, 08) */
 #bcArticle .editor .editor-wrap .slide li .slide-pic .part-three {
-    width: 20%;
     width: 33.3339%;
     height: 100%;
 }
@@ -1098,10 +1102,18 @@
 }
 
 /* 06) 추천 > 추천 리스트 슬라이드 */
+/* 추가 - 왼쪽 마진 */
+#bcArticle .recommend .recom-list {
+    width: 940px;
+    overflow: visible;
+    margin: 0 auto;
+}
 #bcArticle .recommend .recom-list .recom-list-box {
-    width: 3400px;
+    width: 3200px;
     padding: 50px 0;
     margin-left: 20px;
+    /* 애니메이션 동작 */
+    transition: tranform 0.5s;
 }
 #bcArticle .recommend .recom-list .recom-list-box li {
     width: 240px;
@@ -1176,7 +1188,7 @@
     position: relative;
 }
 /* 사이드 버튼 > prev */
-#bcArticle .recommend .recom-side .btn-prev .prev-img {
+#bcArticle .recommend .recom-side .recom-btn-prev .prev-img {
     position: absolute;
     top: 36%;
     left: 30px;
@@ -1194,7 +1206,7 @@
     background-position: -164px -174px;
 }
 /* 사이드 버튼 > next */
-#bcArticle .recommend .recom-side .btn-next .next-img {
+#bcArticle .recommend .recom-side .recom-btn-next .next-img {
     position: absolute;
     top: 36%;
     right: 30px;
